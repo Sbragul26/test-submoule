@@ -1,0 +1,10 @@
+## JSON to Code Converter
+
+### Project Overview
+This project is a Code Generation Converter that transforms code written in JSON format into multiple programming languages including C, C++, and Python. It is designed to help developers auto-generate structured code from a unified JSON schema.
+
+I have implemented the core logic in JavaScript, then converted it into TypeScript (.ts) . The resulting output can be obtained in file format, making it easy to download and use the generated code.
+
+### Output 
+![JSON to Code Demo](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/json-convertor.gif)
+
