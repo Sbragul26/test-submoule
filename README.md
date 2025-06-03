@@ -8,3 +8,17 @@ I have implemented the core logic in JavaScript, then converted it into TypeScri
 ### Output 
 ![JSON to Code Demo](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/json-convertor.gif)
 
+###Code Generation Converter: Prototype Completion Update
+
+This tool successfully transforms code from a `JSON` schema into multiple programming languages, including C, C++, Python and Xml.
+
+The generated code outputs are stored in the `public/generated-code` directory, ready for download and use. This makes it super convenient for developers to access and integrate the auto-generated, structured code into their projects.
+
+###Next steps: 
+Testing, optimization, and adding support for more languages
+
+#Output
+![Code Generation Converter Demo](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/jsontocode.gif)
+![Code Generation Converter Demo](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/json-convertor.gif)
+
+@aeroramesh @harish-ramar 
