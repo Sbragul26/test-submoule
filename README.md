@@ -1,27 +1,8 @@
-## JSON to Code Converter
+### Testing of the Create Nodes to Represent Tree Structure Feature
 
-### Project Overview
-This project is a Code Generation Converter that transforms code written in JSON format into multiple programming languages including C, C++, and Python. It is designed to help developers auto-generate structured code from a unified JSON schema.
+The functionality to create nodes representing a tree structure was tested. The following issue was observed:
 
-I have implemented the core logic in JavaScript, then converted it into TypeScript (.ts) . The resulting output can be obtained in file format, making it easy to download and use the generated code.
+- When tree sub-nodes (e.g., **Tree1**, **Tree2**) are created, they are labeled sequentially.
+- However, after deleting these nodes, the label counter does not reset. The next created node is labeled as **Tree3**, instead of restarting from **Tree1**.
 
-### Output 
-![JSON to Code Demo](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/json-convertor.gif)
-
-
-
-# Code Generation Converter: Prototype Completion Update
-
-This tool successfully transforms code from a `JSON` schema into multiple programming languages, including **C**, **C++**, **Python**, and **XML**.
-
-The generated code outputs are stored in the `public/generated-code` directory, ready for download and use. This makes it highly convenient for developers to access and integrate the auto-generated, structured code into their projects.
-
-## Next Steps
-- Testing
-- Optimization
-- Adding support for more languages
-
-## Output
-![Code Generation Converter Demo](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/jsontocode.gif)  
-
-@aeroramesh @harish-ramar
+This behavior may lead to confusion, as the numbering does not ref
