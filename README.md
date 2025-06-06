@@ -8,48 +8,45 @@ Each section includes goals, components/hooks used, and newly added functions, o
 
 ---
 
-## 🚀 Feature 1: JSON to Code Converter
+## Feature 1: JSON to Code Converter
 
-### 🎯 Goal
+### Goal
 Convert JSON data into code for languages like **C**, **C++**, **Python**, and **XML**, with an optional button to **run** the generated code.
 
 ---
 
-### 🧠 Hooks
+### Hooks
 
-- **Hook Name**: `useAction`  
-  **File Path**: `src/hooks/useAction.tsx`
+- **Hook Name**: `actions.jsx`  
+  **File Path**: `src/hooks/actions.jsx`
 
 ---
 
-### 🆕 New Functionality
+### New Functionality
 
 - Converts JSON data (in Node and Edge formats) to C, C++, Python, or XML code.
-- Saves the generated code for easy use.
+- Saves the generated code in `public/generated-code` directory for easy and global use.
 - Adds an optional button to **run** the generated code.
+- Updated `next.config.js` to enable the server side rendering actions and operations.
 
 ---
 
-### 🧩 Functions
+### Functions
 
-#### 📄 File: `app/(dashboard)/actions.tsx`
+#### File: `src/hooks/actions.jsx`
 
-##### `convertJsonToCode(jsonData: JsonSchema, targetLanguage: string)`
-- **Description**: Transforms JSON data into code for the specified language.
+##### `generateCode({ jsonInput })`
+- **Description**: Transforms JSON data into code for the intended language.
 - **Parameters**:
-  - `jsonData: JsonSchema` – Node and Edge data in JSON.
-  - `targetLanguage: string` – Target language (e.g., `"C"`, `"Python"`).
-- **Returns**: `string` – The generated code.
-
-##### `executeGeneratedCode(code: string)`
-- **Description**: Executes the generated code (basic version for testing).
-- **Parameters**: 
-  - `code: string` – The code to execute.
-- **Returns**: `void`
-
+  - `jsonInput` – Node and Edge data in JSON.
+  - Target language (e.g., `"C"`, `"C++"`, `"Python"`, `"Java"`, `"Javascript"`, `"Xml"`).
+- **Returns**: `string` – The generated code and saved in public/generated-code directory
+- ### Note
+-   if the output files already existed , it over-writes the currect file so no duplicate files occured.
+-   
 ---
 
-#### 📄 File: `src/hooks/useAction.tsx`
+#### File: `src/hooks/useAction.tsx`
 
 ##### `useAction()`
 - **Description**: A custom hook to manage JSON-to-code conversion and execution.
@@ -57,23 +54,30 @@ Convert JSON data into code for languages like **C**, **C++**, **Python**, and *
 
 ---
 
-#### 📄 File: `next.config.js`
+#### File: `next.config.js`
 
 - **Description**: Updated to support JSON handling and code generation capabilities.
 
+- `/** @type {import('next').NextConfig} */
+const nextConfig = {
+  serverActions: true, // Enables server-side rendering for dynamic code operations
+};
+
+module.exports = nextConfig;`
+
 ---
 
-#### 📄 File: `src/pages/page.tsx`
+#### File: `src/pages/page.tsx`
 
-##### `fetchJsonData()`
-- **Description**: Retrieves JSON Node and Edge data.
-- **Returns**: `JsonSchema` – JSON schema to convert.
+##### `handleGenerateCode`
+- **Description**: A functions to perform the action hook , this function will execute when the `Generate code` button is clicked (a dummy button to trigger code execution).
+- **Returns**: `None`.
 
 ---
 
-## 🧮 Feature 2: Arithmetic Operation Nodes with Properties Window
+## Feature 2: Arithmetic Operation Nodes with Properties Window
 
-### 🎯 Goal
+### Goal
 Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canvas, with a **Properties Window** to configure nodes and modify input/output data types. These configurations are also embedded into the code generation.
 
 ---
@@ -87,7 +91,7 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 ### 🧩 Components
 
-- `src/components/PropertiesWindow.tsx`
+- `src/components/properties/index.tsx`
 - `src/components/Node/Node.tsx`
 
 ---
@@ -107,7 +111,7 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 #### 📄 File: `src/hooks/useFlow.tsx`
 
-##### `addArithmeticNode(nodeType: string, position: { x: number, y: number })`
+##### `Arithmetic_node`
 - **Description**: Adds an arithmetic node to the canvas.
 - **Parameters**:
   - `nodeType: string` – Type of arithmetic operation.
