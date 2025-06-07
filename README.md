@@ -46,14 +46,6 @@ Convert JSON data into code for languages like **C**, **C++**, **Python**, and *
 -   
 ---
 
-#### File: `src/hooks/useAction.tsx`
-
-##### `useAction()`
-- **Description**: A custom hook to manage JSON-to-code conversion and execution.
-- **Returns**: `object` – Includes `convertJsonToCode`, `executeGeneratedCode`.
-
----
-
 #### File: `next.config.js`
 
 - **Description**: Updated to support JSON handling and code generation capabilities.
@@ -82,21 +74,21 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 ---
 
-### 🧠 Hooks
+### Hooks
 
 - **Hook Name**: `useFlow`  
   **File Path**: `src/hooks/useFlow.tsx`
 
 ---
 
-### 🧩 Components
+### Components
 
 - `src/components/properties/index.tsx`
 - `src/components/Node/Node.tsx`
 
 ---
 
-### 🆕 New Functionality
+### New Functionality
 
 - Add arithmetic operation nodes to canvas.
 - Use properties window to:
@@ -107,16 +99,16 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 ---
 
-### 🔧 Functions
+### Functions
 
-#### 📄 File: `src/hooks/useFlow.tsx`
+#### File: `src/hooks/useFlow.tsx`
 
 ##### `Arithmetic_node`
 - **Description**: Adds an arithmetic node to the canvas.
 - **Parameters**:
   - `nodeType: string` – Type of arithmetic operation.
   - `position: { x: number, y: number }` – Canvas coordinates.
-- **Returns**: `void`
+- **Returns**: `node`
 
 ##### `updateOnDoubleClick(nodeId: string)`
 - **Description**: Opens properties window for the selected node.
@@ -126,13 +118,13 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 ---
 
-#### 📄 File: `src/components/PropertiesWindow.tsx`
+#### File: `src/components/properties/index.tsx`
 
-##### `openPropertiesWindow(nodeId: string)`
+##### `Properties = ({ setNodes }: { setNodes: (nodes: any[]) => void }) `
 - **Description**: Launches the configuration UI for a node.
 - **Parameters**:
-  - `nodeId: string`
-- **Returns**: `void`
+  - `(node)int, float, double , decimal , etc..`
+- **Returns**: `the same type of the input given`
 
 ##### `updateNodeDefinition(nodeId: string, definition: ArithmeticDefinition)`
 - **Description**: Saves arithmetic setup for the node and includes it in code generation.
@@ -143,19 +135,19 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 ---
 
-#### 📄 File: `src/components/Node/Node.tsx`
+#### File: `src/components/Node/Node.tsx`
 
-##### `alterDataType(nodeId: string, inputType: string, outputType: string)`
+##### `handleDoubleClick = (event: React.MouseEvent)`
 - **Description**: Modify a node’s data types via properties window.
 - **Parameters**:
   - `nodeId: string`
   - `inputType: string`
   - `outputType: string`
-- **Returns**: `void`
+- **Returns**: `nodes, edges (json)`
 
 ---
 
-#### 📄 File: `src/pages/page.tsx`
+#### File: `src/pages/page.tsx`
 
 ##### `renderPropertiesWindow()`
 - **Description**: Displays the properties window for UI interaction.
@@ -163,7 +155,7 @@ Enable arithmetic operation nodes (add, subtract, etc.) in a **ReactFlow** canva
 
 ---
 
-## ✅ Summary
+## Summary
 
 This documentation highlights the integration of:
 - A multi-language code generation engine from JSON.
