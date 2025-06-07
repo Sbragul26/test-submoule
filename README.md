@@ -164,3 +164,22 @@ This documentation highlights the integration of:
 
 ---
 
+### Added arithmetic operational nodes and properties window in canvas
+
+### Add Arithmetic Nodes
+- Implement nodes for addition, subtraction, multiplication, division.
+- Enable drag-and-drop and node connections on canvas.
+-
+### Implement Properties Window
+-Integrate properties window from parent repository.
+-Display/edit node attributes dynamically.
+
+### Embed Node Definition in Code
+-Add option to include node details in generated code.
+-Ensure code reflects node properties and connections.
+
+###  Test Generated Code
+-Run code in separate environment.
+-Validate output and provide execution feedback.
+
+
