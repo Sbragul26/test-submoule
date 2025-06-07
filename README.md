@@ -171,15 +171,15 @@ This documentation highlights the integration of:
 - Enable drag-and-drop and node connections on canvas.
   
 ### Implement Properties Window
--Integrate properties window from parent repository.
--Display/edit node attributes dynamically.
+- Integrate properties window from parent repository.
+- Display/edit node attributes dynamically.
 
 ### Embed Node Definition in Code
--Add option to include node details in generated code.
--Ensure code reflects node properties and connections.
+- Add option to include node details in generated code.
+- Ensure code reflects node properties and connections.
 
 ###  Test Generated Code
--Run code in separate environment.
--Validate output and provide execution feedback.
+- Run code in separate environment.
+- Validate output and provide execution feedback.
 
 
