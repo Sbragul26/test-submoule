@@ -7,4 +7,4 @@
 - Separated language logic into individual files
 - Fixed empty canvas trigger issue
 
-
+![Split Component Demo](https://github.com/Sbragul26/test-submoule/raw/main/split-comp.gif)
