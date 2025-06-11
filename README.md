@@ -1,6 +1,5 @@
 
 # Code Generation Hook Improvements
----
 ### Changes:
 
 - Converted generateCode to reusable hook component
