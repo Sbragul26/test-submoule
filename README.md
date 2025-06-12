@@ -3,7 +3,7 @@
 ### Changes:
 
 - Ensured edges connect **only between valid graph nodes**
-- **Blocked connections** to non-graph elements (UI, labels, etc.)
+- **Blocked connections** to non-graph elements
 - Added **type-check validation** before connecting edges
 
 ### Output
