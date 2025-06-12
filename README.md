@@ -7,6 +7,6 @@
 - Later arguments can be added manually to test the code. **Confirmed structure allows for easy future extension.**
 - The file is very large and mixes code generation for multiple languages in a single file. **Separated logic into language-specific files for better maintainability.**
 
-# Output
+### Output
 
-![Edge Connection Demo](https://github.com/Sbragul26/test-submoule/raw/main/edge-conn.gif) 
+![Arithmetic Code Generation](https://github.com/Sbragul26/test-submoule/blob/main/arithmetic-cnew.gif)
