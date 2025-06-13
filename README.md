@@ -10,5 +10,6 @@
   The function previously assumed the structure of `jsonInput` was always valid.  
   Now includes validation checks for the **presence and correct types** of `nodes` and `edges` before proceeding.
 
+## Output
 
-
+![Code Generation Complete](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/completed-codegen.gif)
