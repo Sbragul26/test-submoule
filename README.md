@@ -1,4 +1,4 @@
-### Code Updates Summary ( Completed)
+## Code Updates Summary ( Completed)
 
 - **Refactored `useCodeGenerator` Hook**  
   Updated the `useCodeGenerator` hook to use a `switch-case` structure for handling specific language-based code generation logic directly via hardcoded calls. This simplifies debugging for each language block also provided intended required code.
@@ -10,6 +10,6 @@
   The function previously assumed the structure of `jsonInput` was always valid.  
   Now includes validation checks for the **presence and correct types** of `nodes` and `edges` before proceeding.
 
-## Output
+### Output
 
 ![Code Generation Complete](https://raw.githubusercontent.com/Sbragul26/test-submoule/main/completed-codegen.gif)
