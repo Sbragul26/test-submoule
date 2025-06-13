@@ -1,12 +1,14 @@
-### Completed Improvements
+### Code Updates Summary ( Completed)
 
-- The function assumes the structure of `jsonInput` is always correct. **Added validation** for the presence and types of `nodes` and `edges` before proceeding.
-- There are many hardcoded default values (e.g., `"https://default.api.com"`, `"api_response"`, etc.). **Removed these hardcoded values** and replaced them appropriately.
-- We currently don't need those variables at the bottom. **Removed unnecessary variables.**
-- Just call all the functions (nodes) inside the main function for now (including for Python). **Refactored main function accordingly.**
-- Later arguments can be added manually to test the code. **Confirmed structure allows for easy future extension.**
-- The file is very large and mixes code generation for multiple languages in a single file. **Separated logic into language-specific files for better maintainability.**
+- **Refactored `useCodeGenerator` Hook**  
+  Updated the `useCodeGenerator` hook to use a `switch-case` structure for handling specific language-based code generation logic directly via hardcoded calls. This improves readability and simplifies debugging for each language block.
 
-### Output
+- **Renamed Arithmetic Nodes**  
+  Changed the names of arithmetic operation nodes for clarity and consistency (e.g., `AddNode`, `SubtractNode`, etc.).
 
-![Arithmetic Code Generation](https://github.com/Sbragul26/test-submoule/blob/main/arithmetic-cnew.gif)
+- **Added `jsonInput` Validation**  
+  The function previously assumed the structure of `jsonInput` was always valid.  
+  Now includes validation checks for the **presence and correct types** of `nodes` and `edges` before proceeding, ensuring safer and more predictable code generation behavior.
+
+
+
